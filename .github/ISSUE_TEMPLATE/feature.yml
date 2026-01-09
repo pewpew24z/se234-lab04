@@ -1,0 +1,56 @@
+name: Feature Request test
+description: Suggest an idea or enhancement for this project
+title: "Feature: "
+labels: ["enhancement"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this feature request!
+
+  - type: input
+    id: contact-name
+    attributes:
+      label: Contact Details
+      description: What is your name?
+      placeholder: ex. Sertha Taweewattana
+    validations:
+      required: true
+
+  - type: dropdown
+    id: request-type
+    attributes:
+      label: Type of request?
+      description: Select the type of your request
+      options:
+        - New Feature
+        - Improvement
+        - Enhancement
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: What is the OS which you want to suggest?
+      description: Select your operating system
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - Android
+        - iOS
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: What are the details of your suggestion?
+      description: Explain what you want
+      placeholder: Describe the feature in detail
+    validations:
+      required: true
